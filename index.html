@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <style>
+    /* CUSTOM STYLE FOR DIRECTIVE */
+    vr-directive{
+      display: block;
+      height: calc(100% - 32px);
+      width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+  <!-- positon: bottom|top -->
+  <!-- Position by default setted top -->
+  <vr-directive></vr-directive>
+
+  <!-- ANGULAR LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+
+  <!-- ANGULAR MATERIAL REQUIRED LIBS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <!-- ANGULAR MATERIAL LIBRARY -->
+  <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.0-rc.5/angular-material.js"></script>
+  <script>
+    'use strict';
+    // Declare app level module which depends on views, and components
+    var app = angular.module('app', [
+      'ngMaterial',
+    ]);
+  </script>
+
+  <!-- LOAD THE DIRECTIVE -->
+  <script src="./directives/virtual-repeat/virtual-repeat.directive.js"></script>
+</body>
+</html>

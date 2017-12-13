@@ -1,0 +1,26 @@
+<md-list class="table-fixed-width">
+    <md-list class="list-sub-head" layout="row">
+        <md-input-container class="search-input" flex>
+            <label>Search</label>
+            <input ng-model="search">
+        </md-input-container>
+    </md-list>
+    <md-divider></md-divider>
+
+    <div md-virtual-repeat-container>
+        <md-list-item 
+            md-virtual-repeat="item in vm.items|filter:search" 
+            flex="" 
+            md-item-size="48">
+            <md-list ng-click="vm.selectItem(item)" flex layout="row">
+                <md-list-item flex>{{ item }}</md-list-item>
+            </md-list>
+            <md-divider flex></md-divider>
+        </md-list-item>
+    </div>
+    
+    <md-divider></md-divider>
+    <md-list class="list-sub-bottom" layout="row">
+        <a style="padding:12px;">Create a new list (to dialog)</a>
+    </md-list>
+</md-list>

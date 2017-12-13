@@ -1,0 +1,19 @@
+<md-card>
+    <!-- Toolbar section -->
+    <md-toolbar 
+        class="md-table-toolbar md-default md-top-header" 
+        ng-click="vm.showMenu($event)"
+        >
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="exapmle icon" ng-disabled="true">
+                <md-icon md-svg-icon="assets/icons/list-icon.svg"></md-icon>
+            </md-button>
+              
+            <p>{{vm.selectedItem?vm.selectedItem:'OXO Influencer List'}}</p>
+            <span flex></span>
+            <md-button class="md-icon-button vm-menu-open-button" aria-label="Settings">
+                <md-icon md-svg-icon="assets/icons/arrow-down-icon.svg"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+</md-card>
